@@ -1,0 +1,177 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #303F9F;
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 1rem;
+}
+
+/* Navigation Styles */
+nav {
+    text-align: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #FFEB3B;
+}
+
+/* Mega Menu */
+.mega-menu {
+    position: relative;
+}
+
+.mega-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    width: 1000px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+    z-index: 999;
+    border-radius: 8px;
+}
+
+.mega-menu:hover .mega-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mega-column {
+    padding: 1rem;
+}
+
+.mega-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #303F9F;
+}
+
+.mega-column ul {
+    list-style: none;
+}
+
+.mega-column ul li {
+    margin-bottom: 0.8rem;
+}
+
+.mega-column ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.mega-column ul li a:hover {
+    color: #303F9F;
+}
+
+/* Clear Fix */
+.mega-menu::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* Main Content */
+main {
+    padding: 3rem 0;
+    background-color: #fff;
+}
+
+h2 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #303F9F;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #303F9F;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .mega-content {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    
+    .mega-column {
+        padding: 1rem 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-list li {
+        margin: 0.5rem 0;
+    }
+}
